@@ -7,8 +7,18 @@ body{
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    font-size: xx-large;
 }
-
-.d-flex{
-    justify-content: center;
+h1{
+    height: 100px;
+    padding-top: 200px;
+}
+img.bu{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 50px;
+}
+.vov{
+    height: 20px;
 }
