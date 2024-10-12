@@ -1,15 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LOL</title>
-    <link href="style.css" rel="stylesheet" type="text/css" />
-</head>
-<body class="main">
+<html>
+  <head>
+    <title>Быстрый старт. Размещение интерактивной карты на странице</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=c0a075bd-a598-46df-9e0c-23f74e31f651&lang=ru_RU" type="text/javascript"></script>
     
-    
+    <script src="karta.js" defer></script>
+    <script>
+        initMap();
 
-</body>
+        async function initMap() {
+            await ymaps3.ready;
 
+            const {YMap, YMapDefaultSchemeLayer} = ymaps3;
+
+            const map = new YMap(
+                document.getElementById('map'),
+                {
+                    location: {
+                        center: [55.753607, 37.620920],
+                        zoom: 10
+                    }
+                }
+            );
+
+            map.addChild(new YMapDefaultSchemeLayer());
+        }
+    </script>
+  </head>
+
+  <body>
+    <div class="map-container">
+        <div id="map" style="width: 100%; height: 800px;"></div>
+    </div>
+  </body>
 </html>
