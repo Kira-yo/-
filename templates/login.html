@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Регистрация</title>
+<link rel="stylesheet" href="/static/css/bob.css" type="text/css">
+<link rel="stylesheet" href="/static/css/style.css" type="text/css">
+
+</head>
+<body class="bodyy">
+    <div id="modal" class="modal">
+    <div class="modal-content">
+        <div class="blocklogin">
+            
+            <h2>Регистрация</h2>
+            <form action="Mainpage" id="login-form">
+                <label for="username"> Введите имя:
+                    <input type="username" id="username" name="username" required>
+                </label>
+                <label for="surname">Введите фамилию:
+                    <input type="surname" id="surname" name="surname" required>
+                </label>
+                <label for="login">Введите логин:
+                    <input type="login" id="login" name="login" required>
+                </label>
+                <label for="email">Введите email:
+                    <input type="email" id="email" name="email" required>
+                </label>
+                <label for="password">Введите пароль:
+                    <input type="password" id="password" name="password" required>
+                </label>
+                    <button type="submit">Зарегистрироваться</button>
+            <p>Уже зарегистрированы? <a href="enter">Войдите в систему.</a></p>
+            </form>
+        </div>
+    </div>
+
+<script src="/static/js/login.js"></script>
+</body>
+</html>
